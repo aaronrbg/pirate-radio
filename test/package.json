@@ -10,6 +10,9 @@
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-fs": "^2.12.1",
+    "react-native-sound-player": "^0.5.3",
+    "react-native-track-player": "^1.0.0",
+    "react-native-video": "^4.2.0",
     "shorthash": "0.0.2"
   },
   "devDependencies": {

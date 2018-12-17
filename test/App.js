@@ -28,7 +28,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         {/* <CacheImage /> */}
-        <CacheImage uri='http://localhost:8080/cat.jpg' style='img'/>
+        <CacheImage uri='http://localhost:8080/cat.mp3' style='img'/>
         <Text style={styles.welcome}>${RNFS.CachesDirectoryPath}</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>

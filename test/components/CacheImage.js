@@ -3,6 +3,7 @@ import { View, Image, Text, AppRegistry } from 'react-native';
 let RNFS = require('react-native-fs');
 import shorthash from 'shorthash';
 
+
 export default class CacheImage extends Component {
 
   state = { source:null }
@@ -21,13 +22,12 @@ export default class CacheImage extends Component {
     const { uri } = this.props ; 
     const name = shorthash.unique(uri);
     // const extension = (Platform.OS === 'android') ? 'file://' : '' 
-    const path =`${RNFS.CachesDirectoryPath}/cat.jpg`;
+    const path =`${RNFS.CachesDirectoryPath}/${name}.mp3`;
     RNFS.exists(path).then( exists => {
-          // if(exists)this.loadFile(path);
-          // else 
-          this.downloadFile(uri,path);
+          if(exists)this.loadFile(path);
+          else this.downloadFile(uri,path);
         })
-  }
+    }
 
   render(){
     return(
